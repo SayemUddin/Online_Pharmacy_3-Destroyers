@@ -4,11 +4,7 @@ const port = 5000;//5000 port a run korche
 const cors = require('cors');//front end back end error handling
 const app = express();//express initialize krlam variable er naam app dilam....
 
-app.use(
-    cors({
-        origin: ["http://localhost:5000", "https://online-pharmacy.onrender.com"],          
-})
-);
+app.use(cors());
 
 app.use(express.json())//server json akare kaj krar jnno...
 app.use(express.urlencoded({extended:false}));//web a pathanor jnno
