@@ -23,7 +23,7 @@ const Addproduct = () => {
             return;
         }
         //console.log(product);//post request jacche addproduct path a usestate er product a 
-        axios.post("http://localhost:5000/addproduct",product).then((res)=>{
+        axios.post("https://online-pharmacy-3-destroyers-backend.onrender.com/addproduct",product).then((res)=>{
              if(res.data && res.data.acknowledged && res.data.insertedId){
                 window.alert("Data is inserted Succesfully")
                 setProduct({

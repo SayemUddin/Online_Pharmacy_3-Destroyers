@@ -20,7 +20,7 @@ const ManageProduct = () => {
        // console.log(e.target.name);
     }
     useEffect(() => {
-        axios.get(`http://localhost:5000/products/${id}`).then((res)=>{
+        axios.get(`https://online-pharmacy-3-destroyers-backend.onrender.com/products/${id}`).then((res)=>{
             if(res.data && res.data._id){
                setProduct(res.data);
             //    console.log(res.data);
@@ -46,7 +46,7 @@ const ManageProduct = () => {
             return;
         }
         //console.log(product);
-        axios.post("http://localhost:5000/updates",product).then((res)=>{
+        axios.post("https://online-pharmacy-3-destroyers-backend.onrender.com/updates",product).then((res)=>{
             // console.log(res.data);
              if(res.data && res.data.acknowledged){
                 window.alert("Product Succesfully");
@@ -62,7 +62,7 @@ const ManageProduct = () => {
         if(!res){
             return;
         }
-        axios.post("http://localhost:5000/products",product).then((res)=>{
+        axios.post("https://online-pharmacy-3-destroyers-backend.onrender.com/products",product).then((res)=>{
              console.log(res.data);
              if(res.data && res.data.acknowledged && res.data.deletedCount){
                 window.alert("Product is Deleted");

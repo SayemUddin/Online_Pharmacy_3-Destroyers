@@ -4,7 +4,7 @@ import axios from 'axios'
 const Services = (props) => {
     const [products, setProducts] = useState(null)
     useEffect(() => {
-        axios.get("http://localhost:5000/products").then((res)=>{
+        axios.get("https://online-pharmacy-3-destroyers-backend.onrender.com/products").then((res)=>{
             if(props.lim){
                 setProducts(res.data.slice(0,props.lim));
             }else{

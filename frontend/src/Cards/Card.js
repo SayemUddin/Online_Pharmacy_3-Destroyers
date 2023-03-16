@@ -10,7 +10,7 @@ const Card = (props) => {
             return;
         }
         const newQuan = quan -1;
-        axios.post("http://localhost:5000/update",{_id:props.id, quan: newQuan}).then((res)=>{
+        axios.post("https://online-pharmacy-3-destroyers-backend.onrender.com/update",{_id:props.id, quan: newQuan}).then((res)=>{
             
             if(res.data && res.data.acknowledged){
                window.alert("Order is Sucessfull!")

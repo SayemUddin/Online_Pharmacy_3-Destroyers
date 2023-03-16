@@ -6,7 +6,7 @@ const Manage = () => {
   const [products, setProducts] = useState(null)
   // shb product get krlam and products state a rkhlam.......
   useEffect(() => {
-      axios.get("http://localhost:5000/products").then((res)=>{
+      axios.get("https://online-pharmacy-3-destroyers-backend.onrender.com/products").then((res)=>{
               setProducts(res.data);
       })
   }, [])
